@@ -32,7 +32,9 @@ function App() {
         img={item.img}
         name={item.name}
         isClicked={item.isClicked}
-        holdImage={() => holdImage(item.id)}
+        holdImage={() =>
+          !item.isClicked ? holdImage(item.id) : setMemoryImages(data)
+        }
       />
     );
   });
