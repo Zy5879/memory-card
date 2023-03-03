@@ -16,6 +16,36 @@ body {
   background-color: #f0131e;
 }
 
+/* top-section */
+
+.nav--info {
+  background-color: #f0131e;
+  color: white;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+.game--info {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.scores {
+  font-size: 1.5rem;
+}
+
+/* top-section */
+
+/* card-sections */
+
 .heroes {
   width: 250px;
   height: 250px;
@@ -41,31 +71,6 @@ body {
   box-shadow: 0 5px 15px rgba(180, 200, 200, 1);
 }
 
-.nav--info {
-  background-color: #f0131e;
-  color: white;
-}
-
-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.game--info {
-  text-align: center;
-  font-size: 1.2rem;
-}
-
-.title {
-  font-size: 3rem;
-}
-
-.scores {
-  font-size: 1.5rem;
-}
-
 .heroes--name {
   color: white;
   text-align: center;
@@ -76,3 +81,5 @@ img {
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
+
+/* card--section */
