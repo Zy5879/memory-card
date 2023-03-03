@@ -3,8 +3,6 @@
   src: url("./assets/marvel.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
-  /* font-weight: normal;
-  font-style: normal; */
 }
 
 * {
@@ -14,6 +12,8 @@
 
 body {
   margin: 0;
+  font-family: "marvel";
+  background-color: #f0131e;
 }
 
 .heroes {
@@ -29,15 +29,21 @@ body {
 
 .img--bg {
   border: 1px solid black;
+  border-radius: 5px;
   width: 300px;
   margin-bottom: 20px;
   padding: 20px 20px;
   background-color: black;
 }
+
+.img--bg:hover {
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 5px 15px rgba(180, 200, 200, 1);
+}
+
 .nav--info {
   background-color: #f0131e;
   color: white;
-  /* padding: 20px; */
 }
 
 header {
@@ -49,9 +55,24 @@ header {
 
 .game--info {
   text-align: center;
+  font-size: 1.2rem;
 }
 
 .title {
-  font-family: "marvel";
   font-size: 3rem;
+}
+
+.scores {
+  font-size: 1.5rem;
+}
+
+.heroes--name {
+  color: white;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+img {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }

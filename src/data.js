@@ -119,10 +119,4 @@ export default [
     img: "https://images7.alphacoders.com/107/1074481.jpg",
     name: "Star-Lord",
   },
-  {
-    id: 21,
-    isClicked: false,
-    img: "https://www.motionpictures.org/wp-content/uploads/2022/10/SRE6160_TRL_comp_wta_v0346.1025.jpg",
-    name: "Namor",
-  },
 ];

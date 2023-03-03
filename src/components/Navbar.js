@@ -4,8 +4,8 @@ function Navbar(props) {
       <header>
         <h1 className="title">Marvel Memory Game</h1>
         <ul>
-          <li>Score: {props.currentScore}</li>
-          <li>Best Score: {props.bestScore}</li>
+          <li className="scores">Score: {props.currentScore}</li>
+          <li className="scores">Best Score: {props.bestScore}</li>
         </ul>
       </header>
       <nav>
