@@ -1,7 +1,7 @@
 import Navbar from "./components/Navbar";
 import Main from "./components/Main";
 import data from "./data";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import "./styles.css";
 
@@ -13,16 +13,29 @@ function App() {
   function holdImage(id) {
     setMemoryImages((oldImage) =>
       oldImage.map((img) => {
-        return img.id === id && img.isClicked === false
-          ? { ...img, isClicked: !img.isClicked }
-          : img;
+        return img.id === id ? { ...img, isClicked: !img.isClicked } : img;
       })
     );
     generateRandomIndex();
+    handleScore();
   }
 
   function generateRandomIndex() {
     setMemoryImages((prevImg) => prevImg.sort(() => 0.5 - Math.random()));
+  }
+
+  function handleScore() {
+    setCurrentScore((prevScore) => prevScore + 1);
+  }
+
+  function resetGame() {
+    setMemoryImages(data);
+    if (bestScore < currentScore) {
+      setBestScore(currentScore);
+    } else {
+      return bestScore;
+    }
+    setCurrentScore(0);
   }
 
   const memoryElements = memoryImages.map((item) => {
@@ -33,15 +46,14 @@ function App() {
         name={item.name}
         isClicked={item.isClicked}
         holdImage={() =>
-          !item.isClicked ? holdImage(item.id) : setMemoryImages(data)
+          item.isClicked === true ? resetGame() : holdImage(item.id)
         }
       />
     );
   });
-
   return (
     <div>
-      <Navbar />
+      <Navbar currentScore={currentScore} bestScore={bestScore} />
       {memoryElements}
     </div>
   );

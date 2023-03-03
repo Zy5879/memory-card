@@ -1,5 +1,4 @@
 function Main(props) {
-  console.log(props.isClicked);
   const styles = {
     color: props.isClicked ? "black" : "green",
   };
