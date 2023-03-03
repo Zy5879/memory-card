@@ -1,5 +1,15 @@
+@font-face {
+  font-family: "marvel";
+  src: url("./assets/marvel.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  /* font-weight: normal;
+  font-style: normal; */
+}
+
 * {
   box-sizing: border-box;
+  list-style-type: none;
 }
 
 body {
@@ -7,6 +17,41 @@ body {
 }
 
 .heroes {
-  width: 100px;
-  height: 100px;
+  width: 250px;
+  height: 250px;
+}
+
+.card--container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  padding: 20px;
+}
+
+.img--bg {
+  border: 1px solid black;
+  width: 300px;
+  margin-bottom: 20px;
+  padding: 20px 20px;
+  background-color: black;
+}
+.nav--info {
+  background-color: #f0131e;
+  color: white;
+  /* padding: 20px; */
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.game--info {
+  text-align: center;
+}
+
+.title {
+  font-family: "marvel";
+  font-size: 3rem;
 }

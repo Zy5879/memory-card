@@ -2,7 +2,6 @@ import Navbar from "./components/Navbar";
 import Main from "./components/Main";
 import data from "./data";
 import { useState } from "react";
-
 import "./styles.css";
 
 function App() {
@@ -54,7 +53,7 @@ function App() {
   return (
     <div>
       <Navbar currentScore={currentScore} bestScore={bestScore} />
-      {memoryElements}
+      <div className="card--container">{memoryElements}</div>
     </div>
   );
 }
